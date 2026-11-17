@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Streaming</title>
+    <!-- Tailwind CSS para diseño moderno y colorido sobre fondo oscuro -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-p-6 flex flex-col items-center justify-between min-h-screen">
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="w-full max-w-4xl px-4 py-8 mx-auto">
+        
+        <!-- SECCIÓN 1: APARATO PRINCIPAL (ENCABEZADO, LOGO Y BIENVENIDA) -->
+        <header class="text-center mb-10 bg-slate-900/80 border border-slate-800 p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+            <!-- Logo (Reemplaza la URL por la de tu logo real) -->
+            <div class="flex justify-center mb-4">
+                <img src="URL_DE_TU_LOGO_AQUI" alt="Logo de la Tienda" class="w-24 h-24 object-contain rounded-full bg-slate-800 p-2 border-2 border-indigo-500 shadow-lg shadow-indigo-500/2anchen">
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-2">
+                NOMBRE DE TU TIENDA
+            </h1>
+            
+            <p class="text-emerald-400 font-medium text-sm md:text-base mb-4">
+                ✨ ¡Muchas gracias por tu confianza y preferencia! ✨
+            </p>
+            
+            <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                Bienvenida/o a nuestro portal oficial de información y normativas. Aquí encontrarás de forma transparente todo lo que necesitas saber sobre nuestros servicios de streaming, garantías, responsabilidades y dinámicas de compra.
+            </p>
+        </header>
+
+        <!-- SECCIÓN DE INTRODUCCIÓN GENERAL -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg">
+                <h3 class="text-indigo-400 font-semibold text-lg mb-2 flex items-center gap-2">
+                    📺 ¿Qué es el Streaming?
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Es el servicio digital que te permite acceder a contenido multimedia (películas, series, música) a través de internet de manera inmediata y sin necesidad de descargas pesadas, disfrutando de tus plataformas favoritas al mejor precio.
+                </p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg">
+                <h3 class="text-pink-400 font-semibold text-lg mb-2 flex items-center gap-2">
+                    💡 ¿Por qué las cuentas son más baratas?
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Adquirimos los accesos mediante compras al por mayor, planes familiares o métodos optimizados de distribución autorizada, lo que nos permite trasladar un ahorro significativo directamente a tu bolsillo sin perder calidad ni estabilidad.
+                </p>
+            </div>
+        </section>
+
+        <!-- SELECTOR DE APARTADOS (CLIENTES VS REVENDEDORES) -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <button onclick="mostrarSeccion('clientes')" id="btn-clientes" class="px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 cursor-pointer">
+                👤 Soy Cliente Final
+            </button>
+            <button onclick="mostrarSeccion('revendedores')" id="btn-revendedores" class="px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700 cursor-pointer">
+                🤝 Soy Revendedor
+            </button>
+        </div>
+
+        <!-- SECCIÓN 2: APARTADO PARA CLIENTES -->
+        <div id="seccion-clientes" class="space-y-6 bg-slate-900/50 border border-slate-800/80 p-6 md:p-8 rounded-3xl shadow-xl transition-all">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-indigo-400">📋 Términos y Condiciones - Clientes Finales</h2>
+                <p class="text-slate-400 text-sm">Directo a lo que necesitas saber para disfrutar tu servicio sin contratiempos.</p>
+            </div>
+
+            <div class="space-y-4 text-sm md:text-base text-slate-300">
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-semibold text-pink-400 mb-1">1. Cuentas Completas vs. Perfiles</h4>
+                    <p class="text-slate-400"><strong>Cuenta Completa:</strong> Tienes el control total de acceso (puedes cambiar contraseña según las políticas del servicio). <strong>Perfiles:</strong> Se te asigna un perfil exclusivo dentro de una cuenta compartida; es obligatorio respetar tu espacio, usar únicamente tu perfil designado y no modificar las configuraciones generales ni el PIN de otros usuarios.</p>
+                </div>
+
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-semibold text-pink-400 mb-1">2. Responsabilidades del Cliente</h4>
+                    <p class="text-slate-400">No compartir los datos de acceso con terceras personas ajenas a tu núcleo o acuerdo de compra. Respetar los límites de pantallas simultáneas estipulados para evitar bloqueos en el servicio.</p>
+                </div>
+
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-semibold text-pink-400 mb-1">3. Sanciones y Restricciones</h4>
+                    <p class="text-slate-400">El incumplimiento de las normas (como alterar perfiles ajenos, saturar pantallas o compartir credenciales de perfiles individuales) resultará en la <strong>suspensión inmediata del servicio sin derecho a reembolso</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: APARTADO PARA REVENDEDORES -->
+        <div id="seccion-revendedores" class="hidden space-y-6 bg-slate-900/50 border border-slate-800/80 p-6 md:p-8 rounded-3xl shadow-xl transition-all">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-emerald-400">💼 Términos y Condiciones - Revendedores</h2>
+                <p class="text-slate-400 text-sm">Lineamientos especiales para nuestra red de socios y distribuidores.</p>
+            </div>
+
+            <div class="space-y-4 text-sm md:text-base text-slate-300">
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-semibold text-emerald-400 mb-1">1. Modelo de Negocio y Garantías</h4>
+                    <p class="text-slate-400">Como revendedor, eres responsable de la atención directa y el soporte de primer nivel a tus clientes finales. Nuestras garantías cubren el tiempo estipulado de vigencia de las cuentas o créditos adquiridos.</p>
+                </div>
+
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-semibold text-emerald-400 mb-1">2. Responsabilidades del Socio</h4>
+                    <p class="text-slate-400">Mantener una comunicación clara sobre los TyC con tus propios compradores, filtrar malentendidos y administrar adecuadamente tus créditos o paneles según los acuerdos establecidos.</p>
+                </div>
+
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                    <h4 class="font-semibold text-emerald-400 mb-1">3. Sanciones por Mal Uso</h4>
+                    <p class="text-slate-400">Cualquier práctica desleal, filtración de proveedores directos o intento de hackeo/alteración de los sistemas de distribución provocará la cancelación definitiva del panel o créditos vigentes, sin opción a compensación.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="w-full text-center py-6 border-t border-slate-900 text-slate-500 text-xs">
+        <p>© 2026 Nombre de tu Tienda. Todos los derechos reservados. Diseñado para ofrecer claridad y confianza.</p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD PARA LAS PESTAÑAS -->
+    <script>
+        function mostrarSeccion(tipo) {
+            const seccionClientes = document.getElementById('seccion-clientes');
+            const seccionRevendedores = document.getElementById('seccion-revendedores');
+            const btnClientes = document.getElementById('btn-clientes');
+            const btnRevendedores = document.getElementById('btn-revendedores');
+
+            if (tipo === 'clientes') {
+                seccionClientes.classList.remove('hidden');
+                seccionRevendedores.classList.add('hidden');
+                
+                btnClientes.className = "px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 cursor-pointer";
+                btnRevendedores.className = "px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700 cursor-pointer";
+            } else {
+                seccionClientes.classList.add('hidden');
+                seccionRevendedores.classList.remove('hidden');
+                
+                btnRevendedores.className = "px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-emerald-600 text-white shadow-lg shadow-emerald-600/30 cursor-pointer";
+                btnClientes.className = "px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700 cursor-pointer";
+            }
+        }
+    </script>
+</body>
+</html>
