@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones | Tu Tienda de Streaming</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0a0f1d',
+                        cardbg: '#131b2e',
+                        bordercolor: '#1e293b',
+                        neonpurple: '#8b5cf6',
+                        neonpink: '#ec4899',
+                        neongreen: '#10b981',
+                        neoncyan: '#06b6d4',
+                        neonblue: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Inter & Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0f1d;
+            color: #f8fafc;
+        }
+        /* Custom neon glow effects */
+        .neon-glow-purple {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            position: relative;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6, #ec4899);
+            padding: 2px;
+        }
+        .gradient-border-content {
+            background: #131b2e;
+            border-radius: calc(1rem - 2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-neonpurple selection:text-white">
+
+    <!-- Top Navigation / Header -->
+    <header class="w-full border-b border-bordercolor bg-darkbg/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Store Name -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-neonpurple to-neonpink flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-neonpurple/30">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                        Nexus<span class="gradient-text">Stream</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Portal Oficial de Términos y Condiciones</p>
+                </div>
+            </div>
+            <!-- Thank You Badge -->
+            <div class="hidden sm:flex items-center space-x-2 bg-slate-800/80 border border-slate-700/60 px-4 py-2 rounded-full text-xs font-medium text-emerald-400">
+                <i class="fa-solid fa-heart text-pink-500 animate-pulse"></i>
+                <span>¡Gracias por confiar en nosotros!</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        
+        <!-- Hero & Welcome Section -->
+        <section class="text-center max-w-3xl mx-auto mb-14">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-neonpurple/10 border border-neonpurple/30 text-neonpurple text-xs font-semibold tracking-wider uppercase">
+                <i class="fa-solid fa-shield-halved mr-1"></i> Transparencia y Confianza
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Términos, Condiciones y <span class="gradient-text">Políticas de Servicio</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+                Queremos agradecerte enormemente por elegirnos para disfrutar de tus plataformas de entretenimiento favoritas. Para mantener un servicio excelente, transparente y seguro, hemos preparado esta guía detallada según tu rol en nuestra comunidad.
+            </p>
+            
+            <!-- Role Selection Prompt -->
+            <div class="bg-cardbg border border-bordercolor p-6 sm:p-8 rounded-2xl shadow-xl neon-glow-purple">
+                <h3 class="text-xl font-bold text-white mb-3">¿Cómo participas con nosotros?</h3>
+                <p class="text-slate-400 text-sm mb-6">Selecciona tu perfil para ver la información y normativas personalizadas:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+                    <!-- Client Button -->
+                    <button onclick="selectRole('cliente')" id="btn-cliente" class="role-btn group relative p-5 rounded-xl border-2 border-slate-700 bg-slate-900/50 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 flex flex-col items-center text-center cursor-pointer">
+                        <div class="w-14 h-14 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white mb-1">Soy Cliente</span>
+                        <span class="text-xs text-slate-400">Compro cuentas o perfiles para uso personal o familiar.</span>
+                    </button>
+
+                    <!-- Reseller Button -->
+                    <button onclick="selectRole('revendedor')" id="btn-revendedor" class="role-btn group relative p-5 rounded-xl border-2 border-slate-700 bg-slate-900/50 hover:border-pink-500 hover:bg-pink-500/10 transition-all duration-300 flex flex-col items-center text-center cursor-pointer">
+                        <div class="w-14 h-14 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white mb-1">Soy Revendedor</span>
+                        <span class="text-xs text-slate-400">Adquiero stock mayorista para revender a mis propios clientes.</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Container (Hidden initially until role is selected) -->
+        <section id="content-container" class="hidden space-y-12 transition-all duration-500">
+            
+            <!-- Section 1: What is streaming & Why cheaper? -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- What is streaming -->
+                <div class="bg-cardbg border border-bordercolor p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-neoncyan/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-neoncyan/20 text-neoncyan flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">¿Qué es el Streaming?</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        El streaming es la tecnología que te permite ver películas, series, escuchar música o disfrutar de contenido multimedia en tiempo real a través de internet sin necesidad de descargar archivos pesados en tus dispositivos.
+                    </p>
+                </div>
+
+                <!-- Why cheaper -->
+                <div class="bg-cardbg border border-bordercolor p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-neonpurple/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-neonpurple/20 text-neonpurple flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">¿Por qué son más baratas?</h3>
+                    </div>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Nuestras cuentas y perfiles provienen de compras al por mayor, planes familiares compartidos o promociones oficiales estratégicas. Esto nos permite optimizar costos y transferir un ahorro masivo directamente a tu bolsillo, garantizando estabilidad.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2: Terms of Service (Divided: Complete Accounts & Profiles) -->
+            <div class="bg-cardbg border border-bordercolor p-6 sm:p-8 rounded-2xl">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-2">Condiciones Generales del Servicio</h3>
+                    <p class="text-slate-400 text-sm">Normas específicas según la modalidad que hayas adquirido.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Complete Accounts -->
+                    <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-xl">
+                        <div class="flex items-center space-x-3 mb-4 border-b border-slate-800 pb-3">
+                            <div class="w-8 h-8 rounded bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">Cuentas Completas</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-cyan-400 mt-1"></i>
+                                <span><strong>Uso exclusivo:</strong> La cuenta es totalmente tuya, puedes administrar perfiles según la capacidad del plan.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-cyan-400 mt-1"></i>
+                                <span><strong>Modificación de datos:</strong> Queda estrictamente prohibido cambiar el correo o contraseña principal a menos que se indique lo contrario.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-cyan-400 mt-1"></i>
+                                <span><strong>Garantía:</strong> Cobertura por el tiempo exacto contratado (30 días o periodo pactado). Si hay caídas, se repone o repara en menos de 24 horas.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Profiles -->
+                    <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-xl">
+                        <div class="flex items-center space-x-3 mb-4 border-b border-slate-800 pb-3">
+                            <div class="w-8 h-8 rounded bg-pink-500/20 text-pink-400 flex items-center justify-center">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white">Perfiles Individuales</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-pink-400 mt-1"></i>
+                                <span><strong>Un dispositivo por perfil:</strong> Cada perfil está diseñado para reproducirse en un (1) solo dispositivo a la vez.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-pink-400 mt-1"></i>
+                                <span><strong>No alterar PIN ni nombre:</strong> No modifiques el PIN de seguridad ni el nombre/avatar de tu perfil a menos que el soporte lo autorice.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-pink-400 mt-1"></i>
+                                <span><strong>Respeto al espacio ajeno:</strong> No invadas perfiles de otros compradores ni satures pantallas simultáneas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Responsibilities (Dynamic based on Client vs Reseller) -->
+            <div id="responsibilities-card" class="bg-cardbg border border-bordercolor p-6 sm:p-8 rounded-2xl">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Section 4: Penalties and Sanctions -->
+            <div class="bg-gradient-to-r from-red-950/30 via-slate-900 to-slate-900 border border-red-900/40 p-6 sm:p-8 rounded-2xl">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Sanciones y Suspensión de Garantía</h3>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Para proteger la calidad del servicio y a todos los usuarios de la plataforma, el incumplimiento de las normativas anteriores acarreará consecuencias directas:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-red-400 font-bold mb-1"><i class="fa-solid fa-ban mr-1"></i> Pérdida de Garantía</div>
+                        <p class="text-xs text-slate-400">Cancelación inmediata del reemplazo ante fallas si se violaron las reglas.</p>
+                    </div>
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-amber-400 font-bold mb-1"><i class="fa-solid fa-user-slash mr-1"></i> Bloqueo de Acceso</div>
+                        <p class="text-xs text-slate-400">Expulsión de la cuenta o perfil sin derecho a reembolso parcial o total.</p>
+                    </div>
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-purple-400 font-bold mb-1"><i class="fa-solid fa-store-slash mr-1"></i> Suspensión Mayorista</div>
